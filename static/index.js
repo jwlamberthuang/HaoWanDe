@@ -313,12 +313,12 @@ function showGameScoreLayer() {
     document.getElementById('GameScoreLayer-score').innerHTML = score_text;
     let bast = cookie('bast-score');
     if (deviation_time < 23000) {
-        if (_gameScore > _gameBest) {
-            _gameBest = _gameScore;
-            cookie('bast-score', _gameBest, 100);
+        if (_gameScore > bast) {
+            bast = _gameScore;
+            cookie('bast-score', bast, 100);
         }
     }
-    document.getElementById('GameScoreLayer-bast').innerHTML = 'Best&nbsp;&nbsp;' + _gameBest;
+    document.getElementById('GameScoreLayer-bast').innerHTML = 'Best&nbsp;&nbsp;' + bast;
     l.style.display = 'block';
 }
 
